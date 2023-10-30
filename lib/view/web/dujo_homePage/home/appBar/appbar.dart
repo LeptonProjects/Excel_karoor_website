@@ -226,7 +226,7 @@ class ResponsiveMobileAppBar extends StatelessWidget {
                     child: Expanded(
                       child: Row(
                         children: [
-                          const LoginButton(),
+                          const LoginButton(),  
                           ListView(
                               shrinkWrap: true,
                               scrollDirection: Axis.horizontal,

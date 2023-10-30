@@ -38,18 +38,28 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: height,
                         color: Colors.white,
                         child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Padding(
-                              padding:  EdgeInsets.only(top: screenSize.width*1/7),
-                              child: Container(
-                               // height: height,
-                               height: screenSize.width*1/5,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            "assets/images/leptdujo1.png"))),
-                              ),
-                            )
+                            ButtonContainerWidget(
+                        curving: 30,
+                        // ignore: sort_child_properties_last
+                        child: Center(
+                          child: Text("Student Login",
+                              style: GoogleFont.subHeadTextStyle),
+                        ),
+                        colorindex: 4,
+                        height: screenSize.width/8,
+                        width: 400),
+                        ButtonContainerWidget(
+                        curving: 30,
+                        // ignore: sort_child_properties_last
+                        child: Center(
+                          child: Text("Parent Login",
+                              style: GoogleFont.subHeadTextStyle),
+                        ),
+                        colorindex: 2,
+                        height: screenSize.width/8,
+                        width: 400)
                           ],
                         )),
                   ),
@@ -57,27 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  // GestureDetector(
-                  //   onTap: () {
-                  //     Navigator.push(context, MaterialPageRoute(
-                  //       builder: (context) {
-                  //         return TeacherLoginScreen();
-                  //       },
-                  //     ));
-                  //   },
-                  //   child: ButtonContainerWidget(
-                  //       curving: 30,
-                  //       // ignore: sort_child_properties_last
-                  //       child: Center(
-                  //         child: Text(
-                  //           "Teacher Login",
-                  //           style: GoogleFont.subHeadTextStyle,
-                  //         ),
-                  //       ),
-                  //       colorindex: 0,
-                  //       height: screenSize.width/8,
-                  //       width: 400),
-                  // ),
+ 
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(

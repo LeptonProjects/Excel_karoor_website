@@ -87,47 +87,75 @@ class DujoHOmeScreen extends StatelessWidget {
         children: [
           SizedBox(
               height: 402, //const Color(0xFF17BDB5),
-              child: ResponsiveWebSite.isMobile(context)
+              child: ResponsiveWebSite.isMobile(
+                      context) //--------------------------------> M O B I L E  V I E W
                   ? Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text(
-                          'E X C E L  K A R O O R',
-                          style: TextStyle(
-                              fontSize: 21,
-                              color: excelkaroorThemeColor,
-                              fontWeight: FontWeight.w600),
-                        ),
+                      children: [
                         Padding(
-                          padding: EdgeInsets.only(top: 02),
-                          child: Text(
-                              'Most trusted brand for experienced tutoring',
-                              style: TextStyle(
-                                fontSize: 11,
-                                color: cBlack,
-                              )),
-                        ),
+                          padding: const EdgeInsets.only(top: 100,right: 50),
+                          child: SizedBox(
+                            height: 100,
+                            child: Column(
+                              children: const [
+                                Text(
+                                  'EXCEL KAROOR',
+                                  style: TextStyle(
+                                      fontSize: 21,
+                                      color: excelkaroorThemeColor,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 02),
+                                  child: Text(
+                                      'Most trusted brand for experienced tutoring',
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        color: cBlack,
+                                      )),
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
                       ],
                     )
                   : Column(
-                      children: const [
-                        Text(
-                          'EXCEL KAROOR',
-                          style: TextStyle(
-                              fontSize: 30,
-                              color: excelkaroorThemeColor,
-                              fontWeight: FontWeight.bold),
-                        ),
+                      //--------------------------------> W E B  V I E W
+                      children: [
                         Padding(
-                          padding: EdgeInsets.only(top: 02),
-                          child: Text(
-                              'Most trusted brand for experienced tutoring',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: cBlack,
-                              )),
-                        ),
+                          padding: EdgeInsets.only(
+                              top: 250,
+                              right: ResponsiveWebSite.isTablet(context)
+                                  ? 300
+                                  : 400),
+                          child: SizedBox(
+                            height: 100,
+                            width: double.infinity,
+                            child: Column(
+                              children: [
+                                Text(
+                                  'EXCEL KAROOR',
+                                  style: TextStyle(
+                                      fontSize:
+                                          ResponsiveWebSite.isTablet(context)
+                                              ? 36
+                                              : 50,
+                                      color: excelkaroorThemeColor,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 02),
+                                  child: Text(
+                                      'Most trusted brand for experienced tutoring',
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          color: cBlack,
+                                          fontWeight: FontWeight.w600)),
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
                       ],
                     )),
         ],
